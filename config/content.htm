@@ -1,162 +1,58 @@
-<h1>About</h1>
-<p>v8:作業</p>
-<p>https://drive.google.com/file/d/1hBnTxlbp41jzoAStKK62UFUb3xnBTlYZ/view?usp=drive_link</p>
-<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/mdecycu/cmsite </a></p>
-<p></p>
-<h1>Brython</h1>
-<p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
-<h4>Examples:</h4>
-<p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
-<p style="padding-left: 30px;"><a href="https://www.geeksforgeeks.org/python-programming-examples/">https://www.geeksforgeeks.org/python-programming-examples/</a></p>
-<p style="padding-left: 30px;"><a href="https://www.programiz.com/python-programming/examples">https://www.programiz.com/python-programming/examples</a></p>
-<p style="padding-left: 30px;"><a href="https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/">https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/</a></p>
-<h4>Python Tutorial:</h4>
-<p style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/">https://docs.python.org/3/tutorial/</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/introduction.html">An informal introduction to Python</a></p>
-<h4>Indentation (Python 採 4 個 Spaces 縮排, 以界定執行範圍)</h4>
-<h4>Variables (<a href="https://github.com/python/cpython/blob/3.11/Lib/keyword.py">Python Keywords</a>)</h4>
-<h4>Comments (# 單行註解, 三個單引號或三個雙引號標註多行註解)</h4>
-<h4><a href="https://docs.python.org/3/tutorial/introduction.html#numbers">Numbers</a> (整數 int(), 浮點數 float())</h4>
-<h4><a href="https://docs.python.org/3/tutorial/introduction.html#strings">Strings</a> (字串)</h4>
-<h4>print (Python 內建函式, <a href="https://docs.python.org/3/library/functions.html#print">print()</a> 函式)</h4>
-<p><a href="https://docs.python.org/3/tutorial/controlflow.html">Python control flow tools</a></p>
-<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#for-statements">for</a></h4>
-<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if</a></h4>
-<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#the-range-function">range</a></h4>
-<h4>open</h4>
-<h4>read</h4>
-<h4><a href="https://docs.python.org/3/tutorial/introduction.html#lists">lists</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">tuples</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionaries</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">functions</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/errors.html#exceptions">try ... except</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops">break</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#pass-statements">pass</a></h4>
-<h4><a href="https://docs.python.org/3/tutorial/classes.html?highlight=classes">classes</a></h4>
-<p>這個頁面 demo 如何在同一頁面下納入多個線上 Ace 編輯器與執行按鈕 (<a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件).</p>
-<p><a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
-<p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為 <a href="https://docs.python.org/3/tutorial/classes.html">class</a> 後, 在範例導入時透過 <a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a> 引用.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
-&lt;script&gt;
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
-&lt;/script&gt;</pre>
-<p>從 1 累加到 100:</p>
-<p><button id="add1to100">1 add to 100</button></p>
-<p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
-<p></p>
-<p></p>
-<!-- 導入 brython 程式庫 -->
-<p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-</p>
-<!-- 啟動 Brython -->
-<p>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
-<p>
-<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/static/ace/filereader.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
-<p>
-<script src="/static/ace/ace.js" type="text/javascript"></script>
-<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="/static/Cango-24v03-min.js"></script>
-<script src="/static/gearUtils-09.js"></script>
-<script src="/static/SVGpathUtils-6v03-min.js"></script>
-<script src="/static/sylvester.js"></script>
-<script src="/static/PrairieDraw.js"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
-<p>
-<script type="text/javascript">
-function doSave(storage_id, filename){
-    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
-    filename = document.getElementById(filename).value
-    saveAs(blob, filename+".py");
-}
-</script>
-</p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import ace
-# 清除畫布
-def clear_bd1(ev):
-    bd = doc["brython_div1"]
-    bd.clear()
-Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
-# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
-def run1():
-    # 利用 get 取下 src 變數值
-    try:
-        url = doc.query["src"]
-    except:
-        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
-    prog = open(url).read()
-
-    # 將程式載入編輯區
-    Ace1.editor.setValue(prog)
-    Ace1.editor.scrollToRow(0)
-    Ace1.editor.gotoLine(0)
-    # 直接執行程式
-    #ns = {'__name__':'__main__'}
-    #exec(prog, ns)
-    # 按下 run 按鈕
-    Ace1.run()
-
-# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
-doc['kw_run1'].bind('click', Ace1.run)
-doc['kw_show_console1'].bind('click', Ace1.show_console)
-doc['kw_clear_console1'].bind('click', Ace1.clear_console)
-doc['clear_bd1'].bind('click', clear_bd1)
-# 呼叫函式執行
-run1()
-</script>
-</p>
-<p><!-- add 1 to 100 開始 -->
-<script type="text/python3">
-from browser import document as doc
-import ace
-
-# 清除畫布
-def clear_bd1(ev):
-    bd = doc["brython_div1"]
-    bd.clear()
-
-# 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
-Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
-
-add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
-
-# 從 gist 取得程式碼
-add_src = open(add1to100_url).read()
-def add(ev):
-    Ace2.editor.setValue(add_src)
-    Ace2.editor.scrollToRow(0)
-    Ace2.editor.gotoLine(0)
-    Ace2.run()
-
-# id 為 "add1to100" 的按鈕點按時, 執行 add 方法
-doc["add1to100"].bind('click', add)
-</script>
-</p>
-<p><!-- add 1 to 100 結束--></p>
-<!-- editor1 開始 -->
-<p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<h1>v1v2v3</h1>
+<p><span>本學期教學使用綜合教學網站<a href="https://mde.tw/cadnote/content/w8.html">cadnote (mde.tw)</a>，支援優化網路環境。課程透過Teams進行實時上課與錄影。考試安排於專屬考試網站進行exam.org</span></p>
+<p><span>ps.我有使用chatgpt幫我優化語言</span></p>
+<h1>v4,v5</h1>
+<p><span>我們已完成在Replit上的註冊，同時啟用雙重認證功能。我們還成功將GitHub帳戶與Replit帳戶綁定，加入了名為"cad2023"的倉儲。此外，我們已經配置了Replit，以便能夠在GitHub帳戶下編輯名為"cad2023"的倉儲中的內容，並啟動相應的網站。</span></p>
+<h1>v6v7</h1>
+<p><span>我們遵從老師的步驟對網路環境進行了優化。同時，在進行任務一的零件圖繪畫時，我們選擇了使用Inventor。在完成繪畫後，我們將檔案匯出並轉換成.stl格式。</span></p>
+<p><span>零件圖雲端共用網址</span></p>
+<p><span>球:https://drive.google.com/file/d/1xHo7kbYPLGMIsZfhyJEiqyoamfe1JwWw/view?usp=drive_link</span></p>
+<p><span>底座:https://drive.google.com/file/d/1xFTVrnZdcgIE8doHQAiuY_mqGXCo8V8F/view?usp=drive_link</span></p>
+<p><span>桿子:https://drive.google.com/file/d/1srI2gH-FrUUJxkoHmVSWxFMsfCMQn8O8/view?usp=drive_link</span></p>
+<p><span>軌道:https://drive.google.com/file/d/1_bFPCizMPjfhx4qIqGkmMmYf994FW-4i/view?usp=sharing</span></p>
+<p><span>碗公:https://drive.google.com/file/d/1L5zV7-mE8Nf2NAXHO0fQR6xuQ1JamZL2/view?usp=drive_link</span></p>
+<p><span>組合圖雲端共用網址</span></p>
+<p><span>組合:https://drive.google.com/file/d/15XGblahf6cGaGec66LgtyFvGoRJ-cHEH/view?usp=drive_link</span></p>
+<h1><span>v8</span></h1>
+<p><span>下載做任務一的文件檔Coppeliasim(類似Onshape的軟體好處是usb可以隨插隨用) 將做好的零件圖在該檔案中組裝起來進行設置(基本都參考上課影片在做邊聽邊做會漏東漏西的)</span></p>
+<p><span>成品雲端共用網址</span></p>
+<p>成品:https://drive.google.com/file/d/1hBnTxlbp41jzoAStKK62UFUb3xnBTlYZ/view?usp=drive_link</p>
+<p><span></span></p>
+<h1><span>v9v10</span></h1>
+<div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-npzpn-79elbk h-full">
+<div class="react-scroll-to-bottom--css-npzpn-1n7m0yu">
+<div class="flex flex-col text-sm gizmo:pb-9 dark:bg-gray-800 gizmo:dark:bg-transparent">
+<div class="w-full text-token-text-primary border-b border-black/10 gizmo:border-0 dark:border-gray-900/50 gizmo:dark:border-0 bg-gray-50 gizmo:bg-transparent dark:bg-[#444654] gizmo:dark:bg-transparent" data-testid="conversation-turn-19">
+<div class="p-4 gizmo:py-2 justify-center text-base md:gap-6 md:py-6 m-auto">
+<div class="flex flex-1 gap-4 text-base mx-auto md:gap-6 gizmo:gap-3 gizmo:md:px-5 gizmo:lg:px-1 gizmo:xl:px-5 md:max-w-2xl lg:max-w-[38rem] gizmo:md:max-w-3xl gizmo:lg:max-w-[40rem] gizmo:xl:max-w-[48rem] xl:max-w-3xl } group final-completion">
+<div class="relative flex w-[calc(100%-50px)] flex-col gizmo:w-full lg:w-[calc(100%-115px)] agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full gap-3 gizmo:gap-0">
+<div class="min-h-[20px] text-message peer flex flex-col items-start gap-3 whitespace-pre-wrap break-words peer-[.text-message]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="fc1b9112-5989-454c-a35f-b3ebd5d8a5e5">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>在過去兩周裡，主要忙於應對考試和完成任務一。初次參與課程，通過詢問同學發現可以使用電腦和手機參與考試(他們有說查不到)但我還是感覺很穩畢竟有chatgpt。結果考超爛可是我發現考試內容主要來自教學網站。這讓我意識到期末考前需更加認真閱讀網站教材。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full pt-2 md:pt-0 border-t md:border-t-0 gizmo:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:pl-2 gizmo:pl-0 gizmo:md:pl-0 md:w-[calc(100%-.5rem)]"><form class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
+<div class="relative flex h-full flex-1 items-stretch md:flex-col">
+<div class="flex w-full items-center"></div>
+</div>
+</form></div>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<h4></h4>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
